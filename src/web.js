@@ -182,7 +182,7 @@ class WitchClock extends HTMLElement {
     const latitude = localStorage?.getItem('latitude')
     const longitude = localStorage?.getItem('longitude')
     
-    if (!latitude) {
+    if (!latitude || !longitude) {
       return {
         'remembered': false,
         'latitude': defaultValue,
